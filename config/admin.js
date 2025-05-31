@@ -14,4 +14,15 @@ module.exports = ({ env }) => ({
     nps: env.bool('FLAG_NPS', true),
     promoteEE: env.bool('FLAG_PROMOTE_EE', true),
   },
+  admin: {
+    // Configuración para español
+    auth: {
+      secret: env('ADMIN_JWT_SECRET'),
+    },
+    autoOpen: false,
+    watchAdminFiles: true,
+    // Idioma por defecto
+    locales: ['es'],
+    defaultLocale: 'es',
+  },
 });
